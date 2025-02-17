@@ -2,13 +2,6 @@
 using static TaskSession_LinQ1.ListGenerator;
 namespace TaskSession_LinQ1;
 
-public  class CustomComparer:IComparer<string>
-{
-    public int Compare( string? x, string? y)
-    {
-        return x.CompareTo(y);
-    }
-}
 class Program
 {
     static void Main(string[] args)
