@@ -79,7 +79,8 @@ class Program
         #region Q8
 
         string [] Arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-
+        // var Result = Arr.Where(a => a[1] == 'i').Reverse();
+        // foreach(var a in Result) Console.WriteLine(a);
 
         #endregion
 
