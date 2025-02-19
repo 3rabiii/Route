@@ -2,13 +2,6 @@
 using static TaskSession_LinQ1.ListGenerator;
 namespace TaskSession_LinQ1;
 
-public  class CustomComparer:IComparer<string>
-{
-    public int Compare( string? x, string? y)
-    {
-        return x.CompareTo(y);
-    }
-}
 class Program
 {
     static void Main(string[] args)
@@ -86,7 +79,8 @@ class Program
         #region Q8
 
         string [] Arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-
+        // var Result = Arr.Where(a => a[1] == 'i').Reverse();
+        // foreach(var a in Result) Console.WriteLine(a);
 
         #endregion
 
