@@ -1,10 +1,10 @@
 namespace Exam02;
 
-public  class Subject
+public class Subject
 {
-    int SubjectId{get;set;}
-    string? SubjectName{get;set;}
-    public Exam exam{get;set;}
+    public int SubjectId { get; set; }
+    public string? SubjectName { get; set; }
+    public Exam? exam { get; set; }
 
     public Subject(int subjectId, string subjectName)
     {
@@ -12,86 +12,59 @@ public  class Subject
         SubjectName = subjectName;
     }
 
-    public void CreatExam()
+    public void CreateExam()
     {
-        Console.WriteLine("*Enter the type of exam ( 1.Final || 2.Practical )");
+        Console.WriteLine("Enter the type of exam (1. Final || 2. Practical)");
         int typeOfExam = int.Parse(Console.ReadLine());
         Console.Write("Enter the time of the exam: ");
         int timeOfExam = int.Parse(Console.ReadLine());
         Console.Write("Enter the number of questions you want to create: ");
         int numberOfQuestions = int.Parse(Console.ReadLine());
-        Question question;
-        if (typeOfExam == 1)
+        exam = typeOfExam == 1 ? new FinalExam(timeOfExam, numberOfQuestions) : new PracticalExam(timeOfExam, numberOfQuestions);
+        for (int i = 0; i < numberOfQuestions; i++)
         {
-            exam=new FinalExam(timeOfExam,numberOfQuestions);
-            for (int i = 0; i < numberOfQuestions; i++)
-            {
-                Console.WriteLine("Enter the type of question ( 1.True or False || 2.McqQuestion )");
-                int questionType = int.Parse(Console.ReadLine());
-                Console.Write($"Enter the header of the question number {i+1}: ");
-                string header = Console.ReadLine();
-                Console.Write($"Enter the mark of the question number {i+1}: ");
-                int mark = int.Parse(Console.ReadLine());
-                Console.Write($"Enter the body of the question number {i+1}: ");
-                string body = Console.ReadLine();
-                if (questionType == 1)
-                {
-                    question = new TrueOrFalseQuestion(header, body, mark);
-                    Console.Write($"Enter the correct answer for question number {i+1}: ");
-                    string answer = Console.ReadLine();
-                    question.AnswersList.Add(new Answers((i + 1), answer));
-                    Console.WriteLine("============================================");
-                }
-                else
-                {
-                    Console.Write($"Enter the number of choices for question number {i+1}: ");
-                    int choicesnumber = int.Parse(Console.ReadLine());
-                    List<string> choices = new List<string>();
-                    for (int j = 0; j < choicesnumber; j++)
-                    {
-                        Console.Write($"Enter the choice {j+1}: ");
-                        choices.Add(Console.ReadLine());
-                    }
-                    
-                    question = new McqQuestion(header, body, mark, choices);
-                    Console.Write($"Enter the correct answer for question number {i+1}: ");
-                    string answer = Console.ReadLine();
-                    question.AnswersList.Add(new Answers((i + 1), answer));
-                }
-                exam.questions.Add(question);
-                Console.WriteLine();
-            }
+            exam.questions.Add(CreateQuestion(i + 1));
+        }
+    }
 
+    private Question CreateQuestion(int questionNumber)
+    {
+        Console.WriteLine("Enter the type of question (1. True or False || 2. MCQ)");
+        int questionType = int.Parse(Console.ReadLine());
+        Console.Write($"Enter the header of question {questionNumber}: ");
+        string? header = Console.ReadLine();
+        Console.Write($"Enter the mark of question {questionNumber}: ");
+        int mark = int.Parse(Console.ReadLine());
+        Console.Write($"Enter the body of question {questionNumber}: ");
+        string? body = Console.ReadLine();
+
+        Question question;
+        if (questionType == 1)
+        {
+            question = new TrueOrFalseQuestion(header, body, mark);
         }
         else
         {
-            exam=new PracticalExam(timeOfExam, numberOfQuestions);
-            for (int i = 0; i < numberOfQuestions; i++)
-            {
-                Console.Write($"Enter the header of the question number {i+1}:  ");
-                string? header = Console.ReadLine();
-                Console.Write($"Enter the mark of the question number {i+1}: ");
-                int mark = int.Parse(Console.ReadLine());
-                Console.Write($"Enter the body of the question number {i+1}: ");
-                string? body = Console.ReadLine();
-                Console.Write("Enter the number of the choices: ");
-                int choicesnumber = int.Parse(Console.ReadLine());
-                List<string> choices = new List<string>();
-                for (int j = 0; j < choicesnumber; j++)
-                {
-                    Console.Write($"Enter the choice {j + 1}: ");
-                    choices.Add(Console.ReadLine());
-                }
-                question = new McqQuestion(header, body, mark, choices);
-                Console.Write($"Enter the correct answer for question {i+1}: ");
-                string answer = Console.ReadLine();
-                question.AnswersList.Add(new Answers((i + 1), answer));
-                exam.questions.Add(question);
-                Console.WriteLine("========================================");
-            }
+            question = new McqQuestion(header, body, mark, GetChoices());
         }
-            
-        }
-    
+
+        Console.Write($"Enter the correct answer for question {questionNumber}: ");
+        string? answer = Console.ReadLine();
+        question.AnswersList.Add(new Answers(questionNumber, answer));
+        Console.WriteLine("========================================");
+        return question;
     }
-    
+
+    private List<string> GetChoices()
+    {
+        Console.Write("Enter the number of choices: ");
+        int choicesNumber = int.Parse(Console.ReadLine());
+        List<string> choices = new();
+        for (int j = 0; j < choicesNumber; j++)
+        {
+            Console.Write($"Enter choice {j + 1}: ");
+            choices.Add(Console.ReadLine());
+        }
+        return choices;
+    }
+}

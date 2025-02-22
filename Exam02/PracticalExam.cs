@@ -1,5 +1,3 @@
-using System.Security;
-
 namespace Exam02;
 
 public class PracticalExam:Exam

@@ -1,5 +1,3 @@
-using System.Threading.Channels;
-
 namespace Exam02;
 
 public  class TrueOrFalseQuestion:Question

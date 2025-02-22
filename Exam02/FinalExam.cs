@@ -1,5 +1,3 @@
-using System.IO.Pipes;
-
 namespace Exam02;
 
 public class FinalExam:Exam
@@ -18,7 +16,7 @@ public class FinalExam:Exam
             question.ShowQuestion();
         
             Console.Write("Enter your answer: ");
-            string userAnswer = Console.ReadLine();
+            string? userAnswer = Console.ReadLine();
             Console.WriteLine("*****************************************************");
             if (question.AnswersList.Any(a => a.AnswerText.Equals(userAnswer, StringComparison.OrdinalIgnoreCase)))
             {
