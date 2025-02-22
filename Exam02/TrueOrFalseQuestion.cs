@@ -11,7 +11,7 @@ public  class TrueOrFalseQuestion:Question
     public override void ShowQuestion()
     {
         Console.WriteLine($"True || False Question     Mark({Mark})");
-        Console.WriteLine($"Header: {Header}: {Body}");
+        Console.WriteLine($"{Header}: {Body}");
         Console.WriteLine("1.True             2.False");
         Console.WriteLine("=======================================================");
     }

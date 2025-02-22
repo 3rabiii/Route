@@ -12,22 +12,27 @@ public class FinalExam:Exam
     {
         int totalMarks = 0;
         int yourMark = 0;
-
+        Console.WriteLine("********* Final Exam ***********");
         foreach (var question in questions)
         {
             question.ShowQuestion();
         
             Console.Write("Enter your answer: ");
             string userAnswer = Console.ReadLine();
-            Console.WriteLine("****************************************");
-        
+            Console.WriteLine("*****************************************************");
             if (question.AnswersList.Any(a => a.AnswerText.Equals(userAnswer, StringComparison.OrdinalIgnoreCase)))
             {
                 yourMark += question.Mark;
             }
             totalMarks += question.Mark;
         }
-       
+
+        Console.Clear();
+        Console.WriteLine("***** Your result and the correct answers of the questins *****");
+        foreach (var result in questions)
+        {
+            Console.WriteLine($"{result.Header} {result.Body} : {result.AnswersList[0].AnswerText}");
+        }
         Console.WriteLine($"Your Grade: {yourMark} out of {totalMarks}");
     }
 

@@ -13,9 +13,11 @@ class Program
         Console.WriteLine("Do you want to start Exame ( y || n )");
         if (char.Parse(Console.ReadLine()) == 'y')
         {
-            // Stopwatch sw = new Stopwatch();
-            // sw.Start();
+            Console.Clear();
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
             s.exam.ShowExam();
+            Console.WriteLine($"The Elapsed Time = {sw.Elapsed}");
         }
     }
 }

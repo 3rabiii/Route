@@ -1,6 +1,6 @@
 namespace Exam02;
 
-public abstract class Exam
+public class Exam
 {
     public int TimeOfExam{get;set;}
     public int NumberOfQuestions{get;set;}
@@ -13,9 +13,6 @@ public abstract class Exam
         questions = new List<Question>();
     }
 
-    public virtual void ShowExam()
-    {
-      
-    }
+    public virtual void ShowExam(){}
 
 }

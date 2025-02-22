@@ -1,6 +1,6 @@
 namespace Exam02;
 
-public abstract class Question: IComparable<Question>
+public  class Question
 {
     public string? Header{get;set;}
     public string? Body{get;set;}
@@ -14,12 +14,7 @@ public abstract class Question: IComparable<Question>
         AnswersList = new List<Answers>();
     }
 
-    public abstract void ShowQuestion();
-
-    public int CompareTo(Question? other)
-    {
-        return this.Mark.CompareTo(other.Mark);
-    }
+    public virtual void ShowQuestion(){}
 
     public override string ToString()
     {

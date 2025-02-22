@@ -10,14 +10,22 @@ public class PracticalExam:Exam
 
     public override void ShowExam()
     {
+        Console.WriteLine("********* Practical Exam *******");
         foreach (var question in questions)
         {
             question.ShowQuestion();
 
             Console.Write("Your answer: ");
-            string userAnswer = Console.ReadLine();
+            string answer = Console.ReadLine();
             Console.WriteLine("************************************************");
         }
+        Console.Clear();
+        Console.WriteLine("***** Your result and the correct answers of the questins *****");
+        foreach (var result in questions)
+        {
+            Console.WriteLine($"{result.Header} {result.Body} : {result.AnswersList[0].AnswerText}");
+        }
+        
     }
 
     public override string ToString()

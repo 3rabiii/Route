@@ -10,7 +10,7 @@ public class McqQuestion:Question
     }
     public override void ShowQuestion()
     {
-        Console.WriteLine($"one answer only           Mark({Mark})");
+        Console.WriteLine($"*Please choose one answer only           *Mark({Mark})");
         Console.WriteLine($"{Header}: {Body}");
         for (int i = 0; i < Choices.Count; i++)
         {
@@ -18,6 +18,7 @@ public class McqQuestion:Question
         }
         Console.WriteLine("=============================================");
     }
+    
     public override string ToString()
     {
         return $"McqQuestion({Header}, {Body}, {Mark})";
