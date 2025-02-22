@@ -38,23 +38,14 @@ public class Subject
         Console.Write($"Enter the body of question {questionNumber}: ");
         string? body = Console.ReadLine();
 
-        Question question;
-        if (questionType == 1)
-        {
-            question = new TrueOrFalseQuestion(header, body, mark);
-        }
-        else
-        {
-            question = new McqQuestion(header, body, mark, GetChoices());
-        }
-
+        Question question = questionType == 1 ? new TrueOrFalseQuestion(header, body, mark): new McqQuestion(header, body, mark, GetChoices());
+        
         Console.Write($"Enter the correct answer for question {questionNumber}: ");
         string? answer = Console.ReadLine();
         question.AnswersList.Add(new Answers(questionNumber, answer));
         Console.WriteLine("========================================");
         return question;
     }
-
     private List<string> GetChoices()
     {
         Console.Write("Enter the number of choices: ");
