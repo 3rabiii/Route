@@ -21,7 +21,7 @@ public class PracticalExam:Exam
         Console.WriteLine("***** Your result and the correct answers of the questins *****");
         foreach (var result in questions)
         {
-            Console.WriteLine($"{result.Header} {result.Body} : {result.AnswersList[0].AnswerText}");
+            Console.WriteLine($"{result.Header} {result.Body}        CorrectAnswer: {result.AnswersList[0].AnswerText}");
         }
         
     }

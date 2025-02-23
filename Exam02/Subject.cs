@@ -23,14 +23,15 @@ public class Subject
         exam = typeOfExam == 1 ? new FinalExam(timeOfExam, numberOfQuestions) : new PracticalExam(timeOfExam, numberOfQuestions);
         for (int i = 0; i < numberOfQuestions; i++)
         {
-            exam.questions.Add(CreateQuestion(i + 1));
+            exam.questions.Add(CreateQuestion((i + 1), typeOfExam));
         }
     }
 
-    private Question CreateQuestion(int questionNumber)
+    private Question CreateQuestion(int questionNumber,int typeOfExam)
     {
-        Console.WriteLine("Enter the type of question (1. True or False || 2. MCQ)");
-        int questionType = int.Parse(Console.ReadLine());
+        Console.WriteLine(typeOfExam==1?"Enter the type of question (1. True or False || 2. MCQ)":"*Be careful you can create question from type Mcq only");
+        int questionType=0;
+        if(typeOfExam==1){ questionType= int.Parse(Console.ReadLine());}
         Console.Write($"Enter the header of question {questionNumber}: ");
         string? header = Console.ReadLine();
         Console.Write($"Enter the mark of question {questionNumber}: ");
