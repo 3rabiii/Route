@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using TaskSessionEFcore3.Data.DomainModels;
 
-namespace TaskSessionEFCore3.Data.Configrations
+namespace TaskSessionEFcore3.Data.Configrations
 {
     internal class StudentConfigration : IEntityTypeConfiguration<Student>
     {

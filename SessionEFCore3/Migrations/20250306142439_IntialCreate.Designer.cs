@@ -12,8 +12,8 @@ using TaskSessionEFcore3.Data.Context;
 namespace TaskSessionEFcore3.Migrations
 {
     [DbContext(typeof(TaskSessionEF3Dbcontext))]
-    [Migration("20250306031524_Test")]
-    partial class Test
+    [Migration("20250306142439_IntialCreate")]
+    partial class IntialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,44 +24,6 @@ namespace TaskSessionEFcore3.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("TaskSessionEFCore1.Data.DomainModels.Stud_Course", b =>
-                {
-                    b.Property<int>("Stud_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Stud_Id"));
-
-                    b.Property<int>("Course_Id")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Grade")
-                        .HasColumnType("int");
-
-                    b.HasKey("Stud_Id");
-
-                    b.ToTable("Stud_Courses");
-                });
-
-            modelBuilder.Entity("TaskSessionEFCore3.Data.DomainModels.Course_Inst", b =>
-                {
-                    b.Property<int>("Inst_Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Inst_Id"));
-
-                    b.Property<int>("Course_Id")
-                        .HasColumnType("int");
-
-                    b.Property<double>("Evaluate")
-                        .HasColumnType("float");
-
-                    b.HasKey("Inst_Id");
-
-                    b.ToTable("course_Insts");
-                });
 
             modelBuilder.Entity("TaskSessionEFCore3.Data.DomainModels.Topic", b =>
                 {
@@ -101,12 +63,7 @@ namespace TaskSessionEFcore3.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("TopicId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("TopicId");
 
                     b.ToTable("Courses");
                 });
@@ -147,9 +104,6 @@ namespace TaskSessionEFcore3.Migrations
                     b.Property<int>("Bouns")
                         .HasColumnType("int");
 
-                    b.Property<int>("DepartmentId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Hour_Rate")
                         .HasColumnType("int");
 
@@ -162,8 +116,6 @@ namespace TaskSessionEFcore3.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("DepartmentId");
 
                     b.ToTable("Instructors");
                 });
@@ -180,9 +132,6 @@ namespace TaskSessionEFcore3.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<int>("DepartmentId")
-                        .HasColumnType("int");
-
                     b.Property<string>("FName")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -193,72 +142,9 @@ namespace TaskSessionEFcore3.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int?>("ManagerId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("DepartmentId");
-
-                    b.HasIndex("ManagerId")
-                        .IsUnique()
-                        .HasFilter("[ManagerId] IS NOT NULL");
-
                     b.ToTable("Students");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Course", b =>
-                {
-                    b.HasOne("TaskSessionEFCore3.Data.DomainModels.Topic", "Topic")
-                        .WithMany("Courses")
-                        .HasForeignKey("TopicId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Topic");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Instructor", b =>
-                {
-                    b.HasOne("TaskSessionEFcore3.Data.DomainModels.Department", "Department")
-                        .WithMany("Instructors")
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Student", b =>
-                {
-                    b.HasOne("TaskSessionEFcore3.Data.DomainModels.Department", "Department")
-                        .WithMany("Students")
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TaskSessionEFcore3.Data.DomainModels.Department", "ManagedDepartment")
-                        .WithOne("Manager")
-                        .HasForeignKey("TaskSessionEFcore3.Data.DomainModels.Student", "ManagerId");
-
-                    b.Navigation("Department");
-
-                    b.Navigation("ManagedDepartment");
-                });
-
-            modelBuilder.Entity("TaskSessionEFCore3.Data.DomainModels.Topic", b =>
-                {
-                    b.Navigation("Courses");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Department", b =>
-                {
-                    b.Navigation("Instructors");
-
-                    b.Navigation("Manager")
-                        .IsRequired();
-
-                    b.Navigation("Students");
                 });
 #pragma warning restore 612, 618
         }

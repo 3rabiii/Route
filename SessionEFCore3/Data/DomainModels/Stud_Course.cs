@@ -1,18 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+namespace TaskSessionEFcore3.Data.DomainModels;
 
-namespace TaskSessionEFCore1.Data.DomainModels
+public class Stud_Course
 {
-    public  class Stud_Course
-    {
-        [Key]
-        public int Stud_Id {  get; set; }
-        public int Course_Id {  get; set; }
-        public int Grade {  get; set; }
-
-    }
+    public int StudentId { get; set; }
+    public int CourseId { get; set; }
+    public  Student Student { get; set; }
+    public  Course Course { get; set; }
 }

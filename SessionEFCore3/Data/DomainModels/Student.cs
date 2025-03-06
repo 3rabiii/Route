@@ -22,10 +22,10 @@ namespace TaskSessionEFcore3.Data.DomainModels
         public string? LName { get; set; }
         [MaxLength(100)]
         public string? Address {  get; set; }
-       
         public Department Department {  get; set; }
         public int DepartmentId {  get; set; }
-        
+        public ICollection<Stud_Course> StudentCourses { get; set; } = new HashSet<Stud_Course>();
+
 
     }
 }

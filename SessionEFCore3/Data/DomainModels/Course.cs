@@ -22,5 +22,8 @@ namespace TaskSessionEFcore3.Data.DomainModels
         public string? Description { get; set; }
         public Topic Topic { get; set; }
         public int TopicId { get; set; }
+        public ICollection<Stud_Course> StudentCourses { get; set; } = new HashSet<Stud_Course>();
+        public ICollection<Course_Inst> InstructorCourses { get; set; } = new HashSet<Course_Inst>();
+
     }
 }

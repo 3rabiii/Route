@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TaskSessionEFCore1.Data.DomainModels;
 using TaskSessionEFcore3.Data.DomainModels;
 
 namespace TaskSessionEFcore3.Data.Configrations

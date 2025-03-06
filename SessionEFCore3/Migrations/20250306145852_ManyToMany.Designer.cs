@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskSessionEFcore3.Data.Context;
 
@@ -11,9 +12,11 @@ using TaskSessionEFcore3.Data.Context;
 namespace TaskSessionEFcore3.Migrations
 {
     [DbContext(typeof(TaskSessionEF3Dbcontext))]
-    partial class TaskSessionEF3DbcontextModelSnapshot : ModelSnapshot
+    [Migration("20250306145852_ManyToMany")]
+    partial class ManyToMany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

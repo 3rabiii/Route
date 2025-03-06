@@ -5,7 +5,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskSessionEFCore1.Data.DomainModels;
 using TaskSessionEFcore3.Data.DomainModels;
 
 namespace TaskSessionEFcore3.Data.DomainModels

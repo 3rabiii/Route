@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using TaskSessionEFCore1.Data.DomainModels;
 using TaskSessionEFcore3.Data.DomainModels;
 
 namespace TaskSessionEFcore3.Data.Configrations

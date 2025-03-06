@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskSessionEFcore3.Data.Context;
 
@@ -11,9 +12,11 @@ using TaskSessionEFcore3.Data.Context;
 namespace TaskSessionEFcore3.Migrations
 {
     [DbContext(typeof(TaskSessionEF3Dbcontext))]
-    partial class TaskSessionEF3DbcontextModelSnapshot : ModelSnapshot
+    [Migration("20250306142642_OneToMany")]
+    partial class OneToMany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -68,24 +71,6 @@ namespace TaskSessionEFcore3.Migrations
                     b.HasIndex("TopicId");
 
                     b.ToTable("Courses");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Course_Inst", b =>
-                {
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("InstructorId")
-                        .HasColumnType("int");
-
-                    b.Property<double>("Evaluate")
-                        .HasColumnType("float");
-
-                    b.HasKey("CourseId", "InstructorId");
-
-                    b.HasIndex("InstructorId");
-
-                    b.ToTable("course_Insts");
                 });
 
             modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Department", b =>
@@ -145,21 +130,6 @@ namespace TaskSessionEFcore3.Migrations
                     b.ToTable("Instructors");
                 });
 
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Stud_Course", b =>
-                {
-                    b.Property<int>("StudentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CourseId")
-                        .HasColumnType("int");
-
-                    b.HasKey("StudentId", "CourseId");
-
-                    b.HasIndex("CourseId");
-
-                    b.ToTable("Stud_Courses");
-                });
-
             modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Student", b =>
                 {
                     b.Property<int>("Id")
@@ -203,25 +173,6 @@ namespace TaskSessionEFcore3.Migrations
                     b.Navigation("Topic");
                 });
 
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Course_Inst", b =>
-                {
-                    b.HasOne("TaskSessionEFcore3.Data.DomainModels.Course", "Course")
-                        .WithMany("InstructorCourses")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TaskSessionEFcore3.Data.DomainModels.Instructor", "Instructor")
-                        .WithMany("InstructorCourses")
-                        .HasForeignKey("InstructorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Instructor");
-                });
-
             modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Instructor", b =>
                 {
                     b.HasOne("TaskSessionEFcore3.Data.DomainModels.Department", "Department")
@@ -231,25 +182,6 @@ namespace TaskSessionEFcore3.Migrations
                         .IsRequired();
 
                     b.Navigation("Department");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Stud_Course", b =>
-                {
-                    b.HasOne("TaskSessionEFcore3.Data.DomainModels.Course", "Course")
-                        .WithMany("StudentCourses")
-                        .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("TaskSessionEFcore3.Data.DomainModels.Student", "Student")
-                        .WithMany("StudentCourses")
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Student", b =>
@@ -268,28 +200,11 @@ namespace TaskSessionEFcore3.Migrations
                     b.Navigation("Courses");
                 });
 
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Course", b =>
-                {
-                    b.Navigation("InstructorCourses");
-
-                    b.Navigation("StudentCourses");
-                });
-
             modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Department", b =>
                 {
                     b.Navigation("Instructors");
 
                     b.Navigation("Students");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Instructor", b =>
-                {
-                    b.Navigation("InstructorCourses");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Student", b =>
-                {
-                    b.Navigation("StudentCourses");
                 });
 #pragma warning restore 612, 618
         }
