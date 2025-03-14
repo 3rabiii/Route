@@ -21,6 +21,6 @@ namespace TaskSessionEFcore3.Data.DomainModels
         public DateTime Hiring { get; set; }
         
     
-        public virtual ICollection<Employee> Employee { get; set; } = new HashSet<Employee>();
+        public virtual ICollection<Employee2> Employee { get; set; } = new HashSet<Employee2>();
     }
 }

@@ -12,8 +12,8 @@ using TaskSessionEFcore3.Data.Context;
 namespace TaskSessionEFcore3.Migrations
 {
     [DbContext(typeof(TaskSessionEF3Dbcontext))]
-    [Migration("20250314032826_FullAndPartTimeEmployeeUsingTpcc")]
-    partial class FullAndPartTimeEmployeeUsingTpcc
+    [Migration("20250314112617_TPHRename")]
+    partial class TPHRename
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,27 +28,6 @@ namespace TaskSessionEFcore3.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Department", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Hiring")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Department");
-                });
-
             modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Employee", b =>
                 {
                     b.Property<int>("Id")
@@ -58,9 +37,6 @@ namespace TaskSessionEFcore3.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DepartmentId")
                         .HasColumnType("int");
 
                     b.Property<string>("Discriminator")
@@ -73,9 +49,7 @@ namespace TaskSessionEFcore3.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DepartmentId");
-
-                    b.ToTable("Employee");
+                    b.ToTable("Employees");
 
                     b.HasDiscriminator().HasValue("Employee");
 
@@ -106,22 +80,6 @@ namespace TaskSessionEFcore3.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasDiscriminator().HasValue("PartTimeEmployee");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Employee", b =>
-                {
-                    b.HasOne("TaskSessionEFcore3.Data.DomainModels.Department", "Department")
-                        .WithMany("Employee")
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Department", b =>
-                {
-                    b.Navigation("Employee");
                 });
 #pragma warning restore 612, 618
         }

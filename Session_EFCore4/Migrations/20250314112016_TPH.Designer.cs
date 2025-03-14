@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TaskSessionEFcore3.Data.Context;
 
@@ -11,9 +12,11 @@ using TaskSessionEFcore3.Data.Context;
 namespace TaskSessionEFcore3.Migrations
 {
     [DbContext(typeof(TaskSessionEF3Dbcontext))]
-    partial class TaskSessionEF3DbcontextModelSnapshot : ModelSnapshot
+    [Migration("20250314112016_TPH")]
+    partial class TPH
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,27 +27,6 @@ namespace TaskSessionEFcore3.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Department", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("Hiring")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Departments");
-                });
 
             modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Employee", b =>
                 {
@@ -74,32 +56,6 @@ namespace TaskSessionEFcore3.Migrations
                     b.UseTphMappingStrategy();
                 });
 
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Employee2", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DepartmentId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("EmpName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DepartmentId");
-
-                    b.ToTable("Employee2s");
-                });
-
             modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.FullTimeEmployee", b =>
                 {
                     b.HasBaseType("TaskSessionEFcore3.Data.DomainModels.Employee");
@@ -124,22 +80,6 @@ namespace TaskSessionEFcore3.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasDiscriminator().HasValue("PartTimeEmployee");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Employee2", b =>
-                {
-                    b.HasOne("TaskSessionEFcore3.Data.DomainModels.Department", "Department")
-                        .WithMany("Employee")
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-                });
-
-            modelBuilder.Entity("TaskSessionEFcore3.Data.DomainModels.Department", b =>
-                {
-                    b.Navigation("Employee");
                 });
 #pragma warning restore 612, 618
         }

@@ -182,10 +182,32 @@ class Program
         // foreach(var item in result) Console.WriteLine($"{item.E.EmpName} : {item.D.Name}");
         #endregion
         
-        #region Tpcc
+        #region TBCC
+        // FullTimeEmployee  fullTimeEmployee = new FullTimeEmployee()
+        // {
+        //     Age = 20,
+        //     EmpName = "adel",
+        //     Salary = 20000,
+        //     StartDate = DateTime.Now
+        // };
+        // PartTimeEmployee partTimeEmployee = new PartTimeEmployee()
+        // {
+        //     Age = 30,
+        //     EmpName = "mohamed",
+        //     CountOfHours = 100,
+        //     HourRate = 8
+        //
+        // };
+        // dbcontext.fullTimeEmployees.Add(fullTimeEmployee);
+        // dbcontext.partTimeEmployees.Add(partTimeEmployee);
+        // dbcontext.SaveChanges();
+
+
+        #endregion
+
+        #region TPH
         FullTimeEmployee  fullTimeEmployee = new FullTimeEmployee()
         {
-            Id = 1,
             Age = 20,
             EmpName = "adel",
             Salary = 20000,
@@ -193,22 +215,34 @@ class Program
         };
         PartTimeEmployee partTimeEmployee = new PartTimeEmployee()
         {
-            Id = 2,
             Age = 30,
-            CountOfHours = 100,
             EmpName = "mohamed",
+            CountOfHours = 100,
             HourRate = 8
-
-        };
         
+        };
+        // dbcontext.fullTimeEmployees.Add(fullTimeEmployee);
+        // dbcontext.partTimeEmployees.Add(partTimeEmployee);
+        //dbcontext.SaveChanges();
+        // dbcontext.Employees.Add(fullTimeEmployee);
+        // dbcontext.Employees.Add(partTimeEmployee);
+        // dbcontext.SaveChanges();
+        // var resutl = from E in dbcontext.Employees
+        //     select E;
+        // foreach(var emp in resutl.OfType<PartTimeEmployee>()) Console.WriteLine($"EmpName: {emp.EmpName} :  CountOfHours: {emp.CountOfHours}");
+
 
         #endregion
+        
+        #region MappingView
 
+        // var result = from V in dbcontext.EmployeeDepartmentViews
+        //     select V;
+        // foreach(var item in result)
+        //     Console.WriteLine($"EmployeeId: {item.EmployeeId} : EmpName: {item.EmployeeName} DeptId: {item.DepartmentId} DeptName: {item.DepartmentName}");
 
-
-
-
-
+        #endregion
+        
 
     }
 }

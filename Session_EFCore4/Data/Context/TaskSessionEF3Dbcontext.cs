@@ -13,7 +13,12 @@ namespace TaskSessionEFcore3.Data.Context
     {
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            //modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            //TPH
+            modelBuilder.Entity<FullTimeEmployee>().HasBaseType<Employee>();
+            modelBuilder.Entity<PartTimeEmployee>().HasBaseType<Employee>();
+            //View
+            modelBuilder.Entity<EmployeeDepartmentView>().ToView("EmployeeDepartmentView").HasNoKey();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -21,11 +26,12 @@ namespace TaskSessionEFcore3.Data.Context
 
         }
       
-      //  public DbSet<Employee> Employee { get; set; } // shouldn't be in this class when i use Tpcc
-       public DbSet<FullTimeEmployee>fullTimeEmployees { get; set; }
-       public DbSet<PartTimeEmployee> partTimeEmployees { get; set; }
-    
-      //  public DbSet<Department> Departments { get; set; }
+        //public DbSet<Employee> Employees { get; set; } // shouldn't be in this class when i use Tpcc
+       // public DbSet<FullTimeEmployee>fullTimeEmployees { get; set; }
+       // public DbSet<PartTimeEmployee> partTimeEmployees { get; set; }
+       public DbSet<Employee2> Employee2s { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<EmployeeDepartmentView> EmployeeDepartmentViews { get; set; }
       
     }
     

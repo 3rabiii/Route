@@ -18,7 +18,7 @@ public class Employee
     // public decimal Salary { get; set; }
     // [MaxLength(100)]
     // public string? Address {  get; set; }
-    public virtual Department Department {  get; set; }
-    public int DepartmentId {  get; set; }
+    // public virtual Department Department {  get; set; }
+    // public int DepartmentId {  get; set; }
    
 }
