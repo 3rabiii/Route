@@ -1,0 +1,19 @@
+==>Asp.Net 
+    1.MVC (Consumed in Mobile , Fluter , Android , Ios,FronEnd Framework [React Or Angular])
+    2.Razor Page
+    3.Web Api
+
+==>MVC 
+ The Model-View-Controller (MVC) architectural pattern separates an application into three main components.
+    .Model => Class Represent Table In Database 
+    .View  => Html Page 
+    .Controller => Project Controller
+           .Class Inherit From Class (Controller)
+           .Its Name Must End With Model-View-Controller
+           .Contain Public Non-Static Functions Called Actions 
+           .Have 5 Actions [CRUD Operations] => GetAll , GetbyId , Update , Delete , Add
+
+==>HTTP (Hypertext Transfer Protocol)
+    .is an application protocol for distributed, collaborative, and hypermedia information systems
+
+
