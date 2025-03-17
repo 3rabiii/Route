@@ -15,5 +15,9 @@
 
 ==>HTTP (Hypertext Transfer Protocol)
     .is an application protocol for distributed, collaborative, and hypermedia information systems
-
+    .hTTP responses include a status code, message, and content type.
+    .uniform Resource Identifiers (URIs) consist of URLs and URNs.
+    .system.Web is the base class library for traditional ASP.NET applications.
+    .deployment can be done with IIS for ASP.NET MVC or using Kestrel with a reverse proxy in ASP.NET Core.
+    .templates exist for creating empty projects or structured MVC projects with Controllers, Views, and Models folders.
 
