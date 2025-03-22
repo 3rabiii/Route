@@ -8,11 +8,11 @@ public class Program
         builder.Services.AddControllersWithViews();
         var app = builder.Build();
         
- 
-        //app.MapGet("/adel", () => "Hello World!");
+        
+        app.UseStaticFiles();
         app.MapControllerRoute(
             name: "default",
-            pattern:"{controller}/{action=Index}/{id:int?}");
+            pattern:"{controller=Home}/{action=Index}/{id:int?}");
 
         app.Run();
     }
