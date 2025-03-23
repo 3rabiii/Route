@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+@*Start navbar*@
+<nav class="mt-3">
+    <center>
+        <a class="btn btn-primary" href="/Home/Index">Home</a>
+        <a class="btn btn-secondary" href="/Home/AboutUs">AboutUs</a>
+        <a class="btn btn-success" href="/Home/Privacy">Privacy</a>
+        <a class="btn btn-info" href="/Home/ContactUs">ContactUs</a>
+        <a class="btn btn-info" href="/Home/Login">Login</a>
+        <a class="btn btn-info" href="/Home/Register">Register</a>
+    </center>
+</nav>
+@*end navbar*@
+<div>
+    @RenderBody() 
+</div>
+@*Footer*@
+<footer>
+    <center>
+        <p>CopeyRights &COPY; Route @DateTime.Now.Year</p>
+    </center>
+</footer>
+@*End Footer*@
+
+</body>
+</html>
