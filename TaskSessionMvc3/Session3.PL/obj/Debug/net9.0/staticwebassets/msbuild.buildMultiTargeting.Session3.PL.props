@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/Session3.PL.props" />
-</Project>
