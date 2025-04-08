@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Session3.DAL.Presistance.Data;
+using Session3.DAL.Presistance.Repostories.Departments;
 
 namespace Session3.PL;
 
@@ -14,6 +15,7 @@ public class Program
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 
         });
+        builder.Services.AddScoped<IDepartmentRepostory,DepartmentRepostory>();
         var app = builder.Build();
         app.Run();
     }
