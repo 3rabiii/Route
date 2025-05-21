@@ -1,0 +1,15 @@
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/bin/Debug/net8.0/Presistence.deps.json
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/bin/Debug/net8.0/Presistence.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/bin/Debug/net8.0/Presistence.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/bin/Debug/net8.0/Domain.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/bin/Debug/net8.0/Domain.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/Presistence.csproj.AssemblyReference.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/Presistence.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/Presistence.AssemblyInfoInputs.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/Presistence.AssemblyInfo.cs
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/Presistence.csproj.CoreCompileInputs.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/Presiste.28707F9F.Up2Date
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/Presistence.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/refint/Presistence.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/Presistence.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presistence/obj/Debug/net8.0/ref/Presistence.dll

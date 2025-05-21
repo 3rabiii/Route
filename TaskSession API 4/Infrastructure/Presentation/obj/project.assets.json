@@ -1,0 +1,117 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "ServicesAbstraction/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ServicesAbstraction.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ServicesAbstraction.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ServicesAbstraction/1.0.0": {
+      "type": "project",
+      "path": "../../ServicesAbstraction/ServicesAbstraction.csproj",
+      "msbuildProject": "../../ServicesAbstraction/ServicesAbstraction.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../../Shared/Shared.csproj",
+      "msbuildProject": "../../Shared/Shared.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "ServicesAbstraction >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/or3biii/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/Presentation.csproj",
+      "projectName": "Presentation",
+      "projectPath": "/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/Presentation.csproj",
+      "packagesPath": "/home/or3biii/.nuget/packages/",
+      "outputPath": "/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/or3biii/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "/usr/lib64/dotnet/library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/ServicesAbstraction.csproj": {
+              "projectPath": "/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/ServicesAbstraction.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

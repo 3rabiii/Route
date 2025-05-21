@@ -1,0 +1,12 @@
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/bin/Debug/net8.0/Domain.deps.json
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/bin/Debug/net8.0/Domain.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/bin/Debug/net8.0/Domain.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/obj/Debug/net8.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/obj/Debug/net8.0/Domain.AssemblyInfoInputs.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/obj/Debug/net8.0/Domain.AssemblyInfo.cs
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/obj/Debug/net8.0/Domain.csproj.CoreCompileInputs.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/obj/Debug/net8.0/Domain.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/obj/Debug/net8.0/refint/Domain.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/obj/Debug/net8.0/Domain.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/obj/Debug/net8.0/ref/Domain.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Core/Domain/obj/Debug/net8.0/Domain.csproj.AssemblyReference.cache

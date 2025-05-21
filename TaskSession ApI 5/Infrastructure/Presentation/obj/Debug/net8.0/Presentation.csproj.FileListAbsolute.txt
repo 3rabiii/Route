@@ -1,0 +1,17 @@
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/bin/Debug/net8.0/Presentation.deps.json
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/bin/Debug/net8.0/Presentation.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/bin/Debug/net8.0/Presentation.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/bin/Debug/net8.0/ServicesAbstraction.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/bin/Debug/net8.0/Shared.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/bin/Debug/net8.0/ServicesAbstraction.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/bin/Debug/net8.0/Shared.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.csproj.AssemblyReference.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.AssemblyInfoInputs.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.AssemblyInfo.cs
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.csproj.CoreCompileInputs.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/Presenta.BC777DBE.Up2Date
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/refint/Presentation.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/Presentation.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/Infrastructure/Presentation/obj/Debug/net8.0/ref/Presentation.dll

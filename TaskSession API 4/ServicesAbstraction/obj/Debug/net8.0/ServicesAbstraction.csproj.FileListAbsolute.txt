@@ -1,0 +1,15 @@
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/bin/Debug/net8.0/ServicesAbstraction.deps.json
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/bin/Debug/net8.0/ServicesAbstraction.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/bin/Debug/net8.0/ServicesAbstraction.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/bin/Debug/net8.0/Shared.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/bin/Debug/net8.0/Shared.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/ServicesAbstraction.csproj.AssemblyReference.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/ServicesAbstraction.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/ServicesAbstraction.AssemblyInfoInputs.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/ServicesAbstraction.AssemblyInfo.cs
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/ServicesAbstraction.csproj.CoreCompileInputs.cache
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/Services.38F65FC5.Up2Date
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/ServicesAbstraction.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/refint/ServicesAbstraction.dll
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/ServicesAbstraction.pdb
+/mnt/Track/Courses/Route/Backend/C#Studying/API/api/ServicesAbstraction/obj/Debug/net8.0/ref/ServicesAbstraction.dll
